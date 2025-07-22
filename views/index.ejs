@@ -7,7 +7,25 @@
 </head>
 
 <body>
-    <h1>hello world!</h1>
+    <h1>Users</h1>
+    <div>
+        <% if(users) {%>
+            <% users.forEach((user)=> { %>
+                <ul>
+                    <li>ID: <%= user.id%>
+                    </li>
+                    <li>Username: <%= user.username%>
+                    </li>
+                    <li>Password: <%= user.password%>
+                    </li>
+                </ul>
+                <%})}%>
+    </div>
+    <div>
+        <br>
+        <a href="/sign-up">Create new user</a>
+        </br>
+    </div>
 </body>
 
 </html>
