@@ -3,7 +3,8 @@ import db from "../db/query";
 
 async function getAllUsers(req: Request, res: Response) {
     const users = await db.getAllUsers();
-    res.render("index", { users: users });
+
+    res.render("index", { users: users, user: res.locals.currentUser });
 };
 
 async function createNewUserPost(req: Request, res: Response, next: NextFunction) {
