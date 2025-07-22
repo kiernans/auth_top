@@ -11,6 +11,8 @@ const app: Express = express();
 app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs");
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+require("dotenv").config();
 
 app.use(session({ secret: "cats", resave: false, saveUninitialized: false }));
 app.use(passport.session());
